@@ -193,6 +193,7 @@ impl State {
         self.player.render(ctx);
         ctx.print(0, 0, "Press SPACE to flap.");
         ctx.print(0, 1, &format!("Score: {}", self.score));
+        ctx.print(12,0, &format!("X: {}, Y: {}", self.player.x, self.player.y));
 
         self.obstacle.render(ctx, self.player.x);
         if self.player.x > self.obstacle.x {
