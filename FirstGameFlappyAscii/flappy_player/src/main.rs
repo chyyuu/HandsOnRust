@@ -117,6 +117,7 @@ impl State {
         }
         self.player.render(ctx);
         ctx.print(0, 0, "Press SPACE to flap.");
+        ctx.print(30, 0, "V: ".to_string()+&self.player.velocity.to_string());
         if self.player.y > SCREEN_HEIGHT { // (17)
             self.mode = GameMode::End;
         }
